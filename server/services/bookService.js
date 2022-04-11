@@ -2,6 +2,7 @@ const Book = require("../models/Book.js");
 
 class BookService {
   static async insert(params) {
+    console.log("insert from book service");
     let doesExist = false;
     let newBook = null;
     const oldBook = await Book.findOne({ where: { title: params.title } });
@@ -20,6 +21,7 @@ class BookService {
       });
     }
 
+    console.log("RESULT: ", newBook);
     return [newBook, doesExist];
   }
 

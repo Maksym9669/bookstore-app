@@ -10,10 +10,11 @@ module.exports.bookExists = () => {
   };
 };
 
-module.exports.bookDeletedSuccessfully = () => {
+module.exports.bookDeletedSuccessfully = (id) => {
   return {
     status: 1,
     message: "Book is deleted successfully!",
+    id,
   };
 };
 

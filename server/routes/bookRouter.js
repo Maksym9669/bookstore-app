@@ -9,7 +9,6 @@ const router = express.Router();
 
 module.exports = (params) => {
   router.post("/", validation, BookController.insertMovie);
-
   router.delete("/:id", BookController.deleteMovie);
   router.get("/:id", BookController.showBook);
   router.patch("/:id", validation, BookController.updateMovie);
